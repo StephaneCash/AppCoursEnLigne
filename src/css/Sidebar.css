@@ -1,0 +1,8 @@
+.sidebar a{
+    text-decoration: none !important;
+}
+
+.sidebar 
+.active {
+    border-bottom: 3px solid blue;
+}

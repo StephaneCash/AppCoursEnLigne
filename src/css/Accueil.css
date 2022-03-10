@@ -1,0 +1,20 @@
+.movie-app .row {
+    margin-bottom: 3rem;
+    display: grid !important;
+    grid-template-columns: 310px 310px 310px 310px !important;
+}
+
+.image-container .MuiPaper-root {
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.28s;
+}
+
+.image-container .MuiPaper-root:hover {
+    transform: scale(1.1);
+}
+
+.image-container{
+    position: relative;
+    transition: transform 0.2s;
+}
