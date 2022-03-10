@@ -26,32 +26,35 @@ function MovieView() {
 
 
                                 {location.state.data.map((movie, index) => {
-                                    return (
-                                        <>
-                                            <div key={index} className="image-container d-flex justify-content-start mt-4">
-                                                <Card sx={{ maxWidth: 345 }} className="cardImage">
-                                                    <CardMedia
-                                                        component="img"
-                                                        height="140"
-                                                        image={movie.Poster}
-                                                        alt="vidéos_cours"
-                                                    />
-                                                    <CardContent>
-                                                        <Typography gutterBottom variant="h6" component="div" style={{ fontSize: "16px", height: '7vh' }}>
-                                                            {movie.Title}
-                                                        </Typography>
-                                                    </CardContent>
-                                                    <CardActions>
-                                                        <Button size="small">
-                                                            Laisser un commentaire
-                                                        </Button>
-                                                    </CardActions>
-                                                </Card>
+                                    if (location.state.id === movie.imdbID) {
+                                        return (
+                                            <>
+                                                <div key={index} className="">
+                                                    <Card sx={{ maxWidth: 345 }}  style={{width: '100%', height: '40vh'}}>
+                                                        <CardMedia
+                                                            component="img"
+                                                            height="140"
+                                                            image={movie.Poster}
+                                                            alt="vidéos_cours"
+                                                        />
+                                                        <CardContent>
+                                                            <Typography gutterBottom variant="h6" component="div" style={{ fontSize: "16px", height: '7vh' }}>
+                                                                {movie.Title}
+                                                            </Typography>
+                                                        </CardContent>
+                                                        <CardActions>
+                                                            <Button size="small">
+                                                                Laisser un commentaire
+                                                            </Button>
+                                                        </CardActions>
+                                                    </Card>
 
-                                                <div className="overlay d-flex align-items-center justify-content"></div>
-                                            </div>
-                                        </>
-                                    )
+                                                    <div className="overlay d-flex align-items-center justify-content"></div>
+                                                </div>
+                                            </>
+                                        )
+
+                                    }
                                 })}
 
 
